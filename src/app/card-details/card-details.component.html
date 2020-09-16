@@ -1,0 +1,9 @@
+<!-- Modal content -->
+<div class="modal-content">
+    <h1>{{Details.description | titlecase}}</h1>
+    <div>
+        <p *ngFor="let comment of Details?.comments"><b>{{comment.date | date:'short' }}</b> - {{comment.text}}</p>
+        <textarea #addCommentInput rows="4" cols="50" (keyup.enter)="onEnter(addCommentInput.value); addCommentInput.value='';"
+            placeholder="Add Comment" autofocus></textarea>
+    </div>
+</div>

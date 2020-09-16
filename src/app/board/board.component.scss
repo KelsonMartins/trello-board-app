@@ -1,0 +1,30 @@
+div.board-container {
+    display: flex;
+    padding: 0 5px;
+    height: 100%;
+    overflow: auto;
+}
+
+input {
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background: rgba(11, 86, 139, 0.25);
+    outline: 0;
+    border: 0;
+    color: #fff;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

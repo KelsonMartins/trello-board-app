@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: #0079bf;
+}
+
+p {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    margin: 1em;
+    flex-direction: column;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    max-width: 15rem;
+    margin: 0.1em 0em;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    background-color: #ccdce6;
+    font-size: 0.9rem;
+    min-height: 33px;
+    overflow: hidden;
+}
+
+.card-container .card:not(:last-child) {
+    margin-right: 0;
+}
+
+.card-container .card:not(.highlight-card) {
+    cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+.card.highlight-card {
+    background-color: #969da5;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+}
+
+.card.card.highlight-card span {
+    margin-left: 60px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link),
+    .terminal {
+        width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+        height: 16px;
+        margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+        margin-left: 72px;
+    }
+}

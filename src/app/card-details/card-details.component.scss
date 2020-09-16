@@ -1,0 +1,15 @@
+/* Modal Content/Box */
+.modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    background-color: #e5eff5;
+    box-shadow: 0, 2px, 4px, rgba(0, 0, 0, 0.5);
+    max-width: 570px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
