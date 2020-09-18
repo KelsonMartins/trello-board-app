@@ -1,7 +1,7 @@
 .list {
     background-color: #e5eff5;
     border-radius: 6px;
-    width: 230px;
+    width: 100%;
     padding: 0.5rem 1rem;
     margin: 0.5em;
     display: inline-block;
@@ -25,10 +25,11 @@
 }
 
 input {
-    width: 90%;
     padding: 10px;
-    border: 1px solid violet;
+    border: 0;
     outline: 0;
-    background: #fff;
+    background: rgba(99, 99, 99, 0.25);
     box-shadow: none;
+    width: 100%;
+    color: #fff;
 }

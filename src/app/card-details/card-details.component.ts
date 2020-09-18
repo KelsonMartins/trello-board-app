@@ -1,30 +1,27 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TrelloStoreService } from '../shared/common/trellostore.service';
-import { CardSchema } from '../shared/models/cardschema';
+import { TaskSchema } from '../shared/models/boadschema';
 
 @Component({
   selector: 'app-card-details',
-  templateUrl: './card-details.component.html',
-  styleUrls: ['./card-details.component.scss']
+  templateUrl: './card-details.component.html'
 })
 export class CardDetailsComponent implements OnInit {
-  @Input() Details: CardSchema;
-  modal: HTMLElement;
-  constructor(private cardStore: TrelloStoreService) {
-    this.modal = document.getElementById('cardTaskDetail');
-  }
+  @Input() taskDetails: TaskSchema;
+  @Input() boardId: number;
 
-  ngOnInit(): void {
-    window.onclick = (event) => {
-      if (event.target === this.modal) {
-        this.modal.style.display = 'none';
-      }
-    };
-  }
+  constructor(private cardStore: TrelloStoreService) { }
 
-  onEnter(text: string): void {
+  ngOnInit(): void { }
+
+  addComment(text: string): void {
     if (text !== '') {
-      this.cardStore.newComment(this.Details?.id, text);
+      this.taskDetails = this.cardStore.newComment(this.boardId, this.taskDetails.id, text);
+    }
+  }
+  updateTaskDetails(e): void {
+    if (e) {
+      this.taskDetails = this.cardStore.updateTaskCard(this.taskDetails, this.boardId);
     }
   }
 }

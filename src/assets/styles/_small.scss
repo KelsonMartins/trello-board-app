@@ -1,0 +1,17 @@
+.content {
+    display: flex;
+    margin: 1em;
+    flex-direction: column;
+}
+
+.card {
+    max-width: 18em;
+    margin: 0.125em;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    background-color: transparent;
+    font-size: 0.9rem;
+    overflow-x: hidden;
+    border: 0;
+}

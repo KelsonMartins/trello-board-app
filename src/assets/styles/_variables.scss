@@ -1,0 +1,15 @@
+$primaryColor: #0079bf;
+$secondaryColor: #bf4600;
+
+$body-bg: #002439;
+$body-color: #ffffff;
+
+$theme-colors: (
+    "primary": $primaryColor,
+    "secondary": $secondaryColor
+);
+
+$enable-shadows: true;
+
+// Bootstrap and its default variables
+@import "../../../node_modules/bootstrap/scss/bootstrap";

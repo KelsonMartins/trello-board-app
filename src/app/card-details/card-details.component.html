@@ -1,9 +1,40 @@
-<!-- Modal content -->
-<div class="modal-content">
-    <h1>{{Details.description | titlecase}}</h1>
-    <div>
-        <p *ngFor="let comment of Details?.comments"><b>{{comment.date | date:'short' }}</b> - {{comment.text}}</p>
-        <textarea #addCommentInput rows="4" cols="50" (keyup.enter)="onEnter(addCommentInput.value); addCommentInput.value='';"
-            placeholder="Add Comment" autofocus></textarea>
+<h1 class="mb-3">{{taskDetails.title | titlecase}}</h1>
+<div class="form-group">
+    <input [(ngModel)]="taskDetails.description" type="text" class="form-control"
+        (keyup.enter)="updateTaskDetails($event['target']['value'])" placeholder="You description...">
+</div>
+
+<hr class="my-2" />
+
+<div class="form-group">
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineStatusOptions" [(ngModel)]="taskDetails.status"
+            id="inlineStatus1" value="To Do" (ngModelChange)="updateTaskDetails($event)">
+        <label class="form-check-label" for="inlineStatus1">To Do</label>
     </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineStatusOptions" id="inlineStatus2"
+            [(ngModel)]="taskDetails.status" value="Doing" (ngModelChange)="updateTaskDetails($event)">
+        <label class="form-check-label" for="inlineStatus2">Doing</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineStatusOptions" id="inlineStatus3"
+            [(ngModel)]="taskDetails.status" value="Done" (ngModelChange)="updateTaskDetails($event)">
+        <label class="form-check-label" for="inlineStatus3">Done</label>
+    </div>
+</div>
+
+<hr class="my-2" />
+
+<div class="bg-white p-3" *ngIf="taskDetails?.comments">
+    <p class="small" *ngFor="let comment of taskDetails.comments">
+        <b>{{comment?.date | date:'short' }}</b> - <i>{{comment.text}}</i></p>
+    <!-- <hr class="my-2" /> -->
+</div>
+
+<div class="form-group mt-2">
+    <textarea #commentText class="form-control" placeholder="Your comment..." rows="3"></textarea>
+    <button type="button" class="btn btn-small btn-primary mt-1 float-right"
+        (click)="addComment(commentText.value);commentText.value='';">
+        Save Comment</button>
 </div>

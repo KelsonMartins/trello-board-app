@@ -1,0 +1,15 @@
+<a class="list-group-item list-group-item-action" (dragstart)="dragStart($event)" id="{{task.id}}" data-toggle="modal"
+    data-target draggable="true" (click)="openModal()">
+    <p class="m-0">{{task.title}}</p>
+    <p class="small m-0" *ngIf="task.comments.length > 0">{{task.comments.length}} comment(s)</p>
+</a>
+
+<div id="taskCardModal-{{task.id}}-{{boardId}}" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content w-50">
+        <span (click)="closeModal()" class="close">&times;</span>
+        <app-card-details [taskDetails]="task" [boardId]="boardId"></app-card-details>
+    </div>
+
+</div>

@@ -1,11 +1,38 @@
-<div class="list" (dragover)="allowDrop($event)" (drop)="drop($event)">
-    <p class="list__title"><strong>{{list.name}}</strong></p>
-    <div class="card-container">
-        <app-card *ngFor="let card of list.cards" [card]="card"></app-card>
+<div class="card-deck">
+    <div class="card">
+        <div class="list" (dragover)="allowDrop($event)" (drop)="drop($event)">
+            <p class="list-title"><strong>To Do</strong></p>
+            <div class="list-group" id="To Do">
+                <app-task *ngFor="let task of staged;" [task]="task" [boardId]="boardId"></app-task>
+            </div>
+            <input #addToDoTaskInput type="text" *ngIf="displayAddToDoTask"
+                (keyup.enter)="addTask(addToDoTaskInput.value, 'To Do'); addToDoTaskInput.value=''; displayAddToDoTask=!displayAddToDoTask;"
+                autofocus>
+            <a class="list-newtask" (click)="displayAddToDoTask=!displayAddToDoTask">Add a card...</a>
+        </div>
     </div>
-
-    <input #addCardInput type="text"
-        (keyup.enter)="onEnter(addCardInput.value); addCardInput.value=''; displayAddCard=false;" *ngIf="displayAddCard"
-        autofocus>
-    <a class="list__newcard" (click)="toggleDisplayAddCard();">Add a card...</a>
+    <div class="card">
+        <div class="list" (dragover)="allowDrop($event)" (drop)="drop($event)">
+            <p class="list-title"><strong>Doing</strong></p>
+            <div class="list-group" id="Doing">
+                <app-task *ngFor="let task of inProgress;" [task]="task" [boardId]="boardId"></app-task>
+            </div>
+            <input #addDoingTaskInput type="text" *ngIf="displayAddDoingTask"
+                (keyup.enter)="addTask(addDoingTaskInput.value, 'Doing'); addDoingTaskInput.value=''; displayAddDoingTask=!displayAddDoingTask;"
+                autofocus>
+            <a class="list-newtask" (click)="displayAddDoingTask=!displayAddDoingTask">Add a card...</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="list" (dragover)="allowDrop($event)" (drop)="drop($event)">
+            <p class="list-title"><strong>Done</strong></p>
+            <div class="list-group" id="Done">
+                <app-task *ngFor="let task of completed;" [task]="task" [boardId]="boardId"></app-task>
+            </div>
+            <input #addDoneTaskInput type="text" *ngIf="displayAddDoneTaskInput"
+                (keyup.enter)="addTask(addDoneTaskInput.value, 'Done'); addDoneTaskInput.value=''; displayAddDoneTaskInput=!displayAddDoneTaskInput;"
+                autofocus>
+            <a class="list-newtask" (click)="displayAddDoneTaskInput=!displayAddDoneTaskInput">Add a card...</a>
+        </div>
+    </div>
 </div>

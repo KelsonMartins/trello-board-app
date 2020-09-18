@@ -1,10 +1,13 @@
-<div *ngFor="let board of boards">
-    <h1>{{board.title | titlecase}}</h1>
-    <div class="board-container">
-        <span (click)="closeBoard(board)" class="close">&times;</span>
-        <app-list *ngFor="let list of board.lists; index as i;" [listIndex]="i" [boardId]="board.id" [list]="list"></app-list>
+<div *ngIf="boards">
+    <div *ngFor="let board of boards">
+        <h1>{{board.title | titlecase}}</h1>
+        <div class="container-fluid">
+            <span (click)="closeBoard(board)" class="close">&times;</span>
+            <app-list [boardId]="board.id" [list]="board.lists">
+            </app-list>
+        </div>
     </div>
-</div>
 
-<input #addBoardInput type="text" placeholder="Add new board..."
-    (keyup.enter)="addBoard(addBoardInput.value); addBoardInput.value='';" autofocus>
+    <input #addBoardInput type="text" placeholder="Add new board..."
+        (keyup.enter)="addBoard(addBoardInput.value); addBoardInput.value='';" autofocus>
+</div>

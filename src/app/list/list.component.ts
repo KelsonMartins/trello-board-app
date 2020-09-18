@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TrelloStoreService } from '../shared/common/trellostore.service';
-import { ListSchema } from '../shared/models/listschema';
+import { Status, TaskSchema } from '../shared/models/boadschema';
 
 @Component({
   selector: 'app-list',
@@ -8,38 +8,51 @@ import { ListSchema } from '../shared/models/listschema';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  @Input() list: ListSchema;
+  @Input() list: TaskSchema[];
   @Input() boardId: number;
-  @Input() listIndex: number;
 
-  displayAddCard = false;
-  constructor(public cardStore: TrelloStoreService) { }
+  displayAddToDoTask = false;
+  displayAddDoingTask = false;
+  displayAddDoneTaskInput = false;
 
-  toggleDisplayAddCard(): void {
-    this.displayAddCard = !this.displayAddCard;
-  }
+  constructor(private cardStore: TrelloStoreService) { }
 
   ngOnInit(): void { }
 
-  allowDrop($event): void {
+  get staged(): TaskSchema[] {
+    const stagedArr = [...new Set(this.list.filter(item => item.status === Status.ToDo))];
+    return stagedArr;
+  }
+  get inProgress(): TaskSchema[] {
+    const inProgressArr = [...new Set(this.list.filter(item => item.status === Status.Doing))];
+    return inProgressArr;
+  }
+  get completed(): TaskSchema[] {
+    const completedArr = [...new Set(this.list.filter(item => item.status === Status.Done))];
+    return completedArr;
+  }
+
+  allowDrop($event: DragEvent): void {
     $event.preventDefault();
   }
 
-  drop($event): void {
+  drop($event: any): void {
     $event.preventDefault();
-    const data = $event.dataTransfer.getData('text');
+    const data = $event.dataTransfer.getData('taskId');
     let target = $event.target;
-    const targetClassName = target.className;
+
     while (target.className !== 'list') {
       target = target.parentNode;
     }
-    target = target.querySelector('.card-container');
-    if (targetClassName === 'card') {
+
+    target = target.querySelector('.list-group');
+
+    if (target.className === 'list-group-item') {
       $event.target.parentNode.insertBefore(
         document.getElementById(data),
         $event.target
       );
-    } else if (targetClassName === 'list__title') {
+    } else if (target.className === 'list__title') {
       if (target.children.length) {
         target.insertBefore(document.getElementById(data), target.children[0]);
       } else {
@@ -48,13 +61,25 @@ export class ListComponent implements OnInit {
     } else {
       target.appendChild(document.getElementById(data));
     }
+
+    const tst = target.id;
+    this.updateTaskStatus(data, tst);
   }
 
-  onEnter(value: string): void {
+  addTask(value: string, status: string): void {
+    const statusVal = status as Status;
     if (value !== '') {
-      const updatedListWithCardTask = this.cardStore.newCard(value, this.boardId, this.listIndex);
-      this.list = updatedListWithCardTask;
-      console.log(JSON.stringify(this.list));
+      this.cardStore.newTaskCard(value, statusVal, this.boardId);
+    }
+  }
+
+  updateTaskStatus(taskId: string, state: string): void {
+    const task = this.list.find(x => x.id === taskId);
+    const statusVal = state as Status;
+
+    if (task) {
+      task.status = statusVal;
+      this.list = this.cardStore.updateTaskList(task, this.boardId);
     }
   }
 }
