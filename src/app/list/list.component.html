@@ -3,7 +3,9 @@
         <div class="list" (dragover)="allowDrop($event)" (drop)="drop($event)">
             <p class="list-title"><strong>To Do</strong></p>
             <div class="list-group" id="To Do">
-                <app-task *ngFor="let task of staged;" [task]="task" [boardId]="boardId"></app-task>
+                <app-task id="board-{{boardId}}-task-{{task.id}}" *ngFor="let task of staged;" [task]="task"
+                    [boardId]="boardId">
+                </app-task>
             </div>
             <input #addToDoTaskInput type="text" *ngIf="displayAddToDoTask"
                 (keyup.enter)="addTask(addToDoTaskInput.value, 'To Do'); addToDoTaskInput.value=''; displayAddToDoTask=!displayAddToDoTask;"
@@ -15,7 +17,9 @@
         <div class="list" (dragover)="allowDrop($event)" (drop)="drop($event)">
             <p class="list-title"><strong>Doing</strong></p>
             <div class="list-group" id="Doing">
-                <app-task *ngFor="let task of inProgress;" [task]="task" [boardId]="boardId"></app-task>
+                <app-task id="board-{{boardId}}-task-{{task.id}}" *ngFor="let task of inProgress;" [task]="task"
+                    [boardId]="boardId">
+                </app-task>
             </div>
             <input #addDoingTaskInput type="text" *ngIf="displayAddDoingTask"
                 (keyup.enter)="addTask(addDoingTaskInput.value, 'Doing'); addDoingTaskInput.value=''; displayAddDoingTask=!displayAddDoingTask;"
@@ -27,7 +31,9 @@
         <div class="list" (dragover)="allowDrop($event)" (drop)="drop($event)">
             <p class="list-title"><strong>Done</strong></p>
             <div class="list-group" id="Done">
-                <app-task *ngFor="let task of completed;" [task]="task" [boardId]="boardId"></app-task>
+                <app-task id="board-{{boardId}}-task-{{task.id}}" *ngFor="let task of completed;" [task]="task"
+                    [boardId]="boardId">
+                </app-task>
             </div>
             <input #addDoneTaskInput type="text" *ngIf="displayAddDoneTaskInput"
                 (keyup.enter)="addTask(addDoneTaskInput.value, 'Done'); addDoneTaskInput.value=''; displayAddDoneTaskInput=!displayAddDoneTaskInput;"

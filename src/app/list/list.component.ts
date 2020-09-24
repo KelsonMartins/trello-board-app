@@ -49,19 +49,13 @@ export class ListComponent implements OnInit {
 
     if (target.className === 'list-group-item') {
       $event.target.parentNode.insertBefore(
-        document.getElementById(data),
+        document.getElementById(`board-${this.boardId}-task-${data}`),
         $event.target
       );
-    } else if (target.className === 'list__title') {
-      if (target.children.length) {
-        target.insertBefore(document.getElementById(data), target.children[0]);
-      } else {
-        target.appendChild(document.getElementById(data));
-      }
     } else {
-      target.appendChild(document.getElementById(data));
+      target.appendChild(document.getElementById(`board-${this.boardId}-task-${data}`));
     }
-
+    console.log(document.getElementById(`board-${this.boardId}-task-${data}`));
     const tst = target.id;
     this.updateTaskStatus(data, tst);
   }
@@ -79,7 +73,8 @@ export class ListComponent implements OnInit {
 
     if (task) {
       task.status = statusVal;
-      this.list = this.cardStore.updateTaskList(task, this.boardId);
+      this.cardStore.updateTaskList(task, this.boardId);
+      // this.list = this.cardStore.updateTaskList(task, this.boardId);
     }
   }
 }

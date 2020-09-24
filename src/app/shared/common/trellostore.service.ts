@@ -70,8 +70,7 @@ export class TrelloStoreService {
     const board = this.getBoard(boardId);
     const index = board.lists.findIndex(x => x.id === task.id);
 
-    board.lists.splice(index, 1);
-    board.lists.push(task);
+    board.lists.splice(index, 1, task);
 
     this.updateBoard(board);
 
