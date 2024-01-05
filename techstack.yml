@@ -1,7 +1,8 @@
 repo_name: KelsonMartins/trello-board-app
 report_id: 42d44ff82f119f7e428e0c20cc3a94f3
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-03T10:22:42+00:00'
+timestamp: '2024-01-05T08:29:24+00:00'
 requested_by: KelsonMartins
 provider: github
 branch: main
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app
   detection_source: Repo Metadata
 - name: TypeScript
   description: A superset of JavaScript that compiles to clean JavaScript output
@@ -26,6 +28,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app
   detection_source: Repo Metadata
 - name: Angular
   description: A platform for building mobile and desktop web applications
@@ -37,7 +40,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Javascript MVC Frameworks
   image_url: https://img.stackshare.io/service/3745/cb8U-gL6_400x400.jpg
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -52,7 +55,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Front-End Frameworks
   image_url: https://img.stackshare.io/service/1101/C9QJ7V3X.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2021-10-11 11:25:55.000000000 Z
@@ -65,6 +68,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package.json
   detection_source: package.json
   last_updated_by: Kelson Martins
   last_updated_on: 2020-09-16 09:15:21.000000000 Z
@@ -77,7 +81,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Concurrency Frameworks
   image_url: https://img.stackshare.io/service/1796/984368.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: Kelson Martins
   last_updated_on: 2020-09-16 09:15:21.000000000 Z
@@ -91,7 +95,7 @@ tools:
   category: Libraries
   sub_category: Javascript UI Libraries
   image_url: https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2021-05-23 17:11:39.000000000 Z
@@ -103,6 +107,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app
   detection_source: Repo Metadata
 - name: GitHub Actions
   description: Automate your workflow from idea to production
@@ -112,6 +117,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/.github/workflows/codeql-analysis.yml
   detection_source: ".github/workflows/codeql-analysis.yml"
   last_updated_by: Facundo'Yala
   last_updated_on: 2021-11-22 17:22:13.000000000 Z
@@ -124,7 +130,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Javascript Testing Framework
   image_url: https://img.stackshare.io/service/831/7c0b595409af531b9cdeb07f8c513e8b.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-02-22 11:16:51.000000000 Z
@@ -138,7 +144,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Browser Testing
   image_url: https://img.stackshare.io/service/1420/TidYGd6a.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-03-01 11:15:48.000000000 Z
@@ -152,7 +158,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Javascript Testing Framework
   image_url: https://img.stackshare.io/service/1754/protractor-logo1.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: Kelson Martins
   last_updated_on: 2020-09-16 09:15:21.000000000 Z
@@ -164,6 +170,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/5561/303157.png
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package.json
   detection_source: package.json
   last_updated_by: Kelson Martins
   last_updated_on: 2020-09-16 09:15:21.000000000 Z
@@ -175,6 +182,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package.json
   detection_source: package.json
   last_updated_by: Kelson Martins
   last_updated_on: 2020-09-16 09:15:21.000000000 Z
@@ -184,6 +192,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/src/app/app.component.html
   detection_source: src/app/app.component.html
   last_updated_by: Kelson Martins
   last_updated_on: 2020-09-16 09:15:21.000000000 Z
@@ -197,7 +206,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16162/default_77b54a203c743d16eddb6b6390cba17218454fa0.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -211,7 +220,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16010/default_af9df0bc9fa88191d2fe609204c5bd7599c1a797.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -225,7 +234,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16000/default_976847109ccfe67d00b33d9ff71329b6e82f5f89.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -239,7 +248,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15913/default_ac622bc364a601d766b9a6f6039f191492f54d65.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -253,7 +262,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15917/default_4040fefea2f98006727f63d042275b96a275ab2d.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -267,7 +276,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15927/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -281,7 +290,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15944/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -295,7 +304,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15921/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -309,7 +318,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15933/default_b45165a5d30e541ab11711a34a78209b3e8ed7fd.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -323,7 +332,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15965/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-06-03 07:05:02.000000000 Z
@@ -337,7 +346,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15924/default_ac622bc364a601d766b9a6f6039f191492f54d65.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-03-23 14:53:29.000000000 Z
@@ -351,7 +360,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16060/default_924b66c04aa848a4028c1a5753a23dae0f835f86.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-03-23 14:53:29.000000000 Z
@@ -365,7 +374,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-07-14 11:21:32.000000000 Z
@@ -379,7 +388,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15956/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2021-05-23 00:25:16.000000000 Z
@@ -393,7 +402,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15905/default_3af1504b6f77c55205ba630fe08c472f43b95f6e.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-08-11 11:51:12.000000000 Z
@@ -407,7 +416,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16066/default_8725384794b44fe56f31da1d21ae759cf07be7a5.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-02-22 11:16:51.000000000 Z
@@ -421,7 +430,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15860/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-03-01 11:15:48.000000000 Z
@@ -435,7 +444,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15998/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-03-01 11:15:48.000000000 Z
@@ -449,7 +458,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15886/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-03-01 11:15:48.000000000 Z
@@ -463,7 +472,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15999/default_7a465bc85b23fd837cbc038fd1d504632c41a884.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-03-01 11:15:48.000000000 Z
@@ -477,7 +486,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15830/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2022-07-14 11:21:32.000000000 Z
@@ -491,7 +500,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15853/default_97d4687bd07ff1bb963fd566c84e7cbf7c73bbee.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: dependabot[bot]
   last_updated_on: 2021-09-07 15:33:58.000000000 Z
@@ -505,7 +514,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15915/default_59a1b5716eefa3750c20936c3d53ff13a6390ee1.png
-  detection_source_url: github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
+  detection_source_url: https://github.com/KelsonMartins/trello-board-app/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: Kelson Martins
   last_updated_on: 2020-09-16 09:15:21.000000000 Z
